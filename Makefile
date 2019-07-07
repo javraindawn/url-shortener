@@ -20,17 +20,17 @@ rebuild-angular:
 	for i in 1; do (cd src/server/services/frontend/angular && ng build --prod); done;
 
 pull-images:
-	docker pull javraindawn/url-shortener_app
+	docker pull jaraindawn.azurecr.io/url-shortener_app
 
 push-images:
-	docker push javraindawn/url-shortener_app
+	docker push jaraindawn.azurecr.io/url-shortener_app
 
 logs-app:
 	docker-compose logs --tail=25 -f url-shortener_app
 
 pull-dependencies-app:
-	@echo "Pulling dependencies from javraindawn/url-shortener_app:latest..."
-	@docker run --rm -e DBLESS=1 javraindawn/url-shortener_app:latest tar -cf - node_modules server/services/frontend/angular/node_modules | tar -xvC src 2>&1 | while read l; do echo -ne "\033[2K\r$$l"; done; echo -ne "...done!\n"
+	@echo "Pulling dependencies from jaraindawn.azurecr.io/url-shortener_app:latest..."
+	@docker run --rm -e DBLESS=1 jaraindawn.azurecr.io/url-shortener_app:latest tar -cf - node_modules server/services/frontend/angular/node_modules | tar -xvC src 2>&1 | while read l; do echo -ne "\033[2K\r$$l"; done; echo -ne "...done!\n"
 
 build-app:
 	docker-compose build app
