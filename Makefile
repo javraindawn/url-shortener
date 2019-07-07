@@ -34,3 +34,7 @@ pull-dependencies-app:
 
 build-app:
 	docker-compose build app
+
+deploy: rebuild
+	docker push jaraindawn.azurecr.io/url-shortener_app:latest
+	ssh -i ${URL_SHORTENER_PRIVATE_KEY} ${URL_SHORTENER_SERVER} './deploy-url-shortener.sh'
