@@ -1,0 +1,35 @@
+{
+  "name": "url-shortener-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javraindawn/url-shortener.git"
+  },
+  "author": "Joseph Angelo Rendon",
+  "bugs": {
+    "url": "https://github.com/javraindawn/url-shortener/issues"
+  },
+  "homepage": "https://github.com/javraindawn/url-shortener#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.1.0",
+    "@hapi/boom": "^7.4.2",
+    "@hapi/glue": "^6.1.0",
+    "@hapi/good": "^8.2.0",
+    "@hapi/good-console": "^8.1.0",
+    "@hapi/good-squeeze": "^5.2.0",
+    "@hapi/hapi": "^18.3.1",
+    "@hapi/inert": "^5.2.1",
+    "@hapi/joi": "^15.1.0",
+    "confidence": "^4.0.2",
+    "hapi-sequelizejs": "^2.0.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "ramda": "^0.26.1",
+    "sequelize": "^5.9.2"
+  }
+}

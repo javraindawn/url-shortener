@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  app:
+    volumes:
+      - app-sync:/opt/app:nocopy
+
+volumes:
+  app-sync:
+    external: true

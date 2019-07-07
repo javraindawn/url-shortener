@@ -1,0 +1,14 @@
+version: "2"
+
+syncs:
+  app-sync:
+    src: './src/'
+    sync_host_ip: 'localhost'
+    sync_host_port: 13000
+    sync_group: root
+    sync_userid: 0
+    sync_args:
+      - '--no-perms'
+      - '--no-owner'
+      - '--no-group'
+    sync_strategy: 'rsync'

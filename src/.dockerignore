@@ -1,0 +1,5 @@
+.git
+node_modules
+package-lock.json
+/server/services/frontend/angular/node_modules
+/server/services/frontend/angular/package-lock.json

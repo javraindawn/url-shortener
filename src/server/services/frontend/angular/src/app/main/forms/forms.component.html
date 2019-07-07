@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="title">Shorten URL</div>
+    <div class="url-item">
+        <form #shortenForm="ngForm" (ngSubmit)="process(shortenForm, 'shorten')" class="form form-url">
+            <div class="form-field input-div">
+                <span class="error" [class.no-error]="!shortUrlErr">You have inputted an invalid URL!</span>
+                <input name="longUrl" id="url-longurl" type="text" class="form-input" placeholder="type the URL you wish to shorten..." ngModel required>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+        <h1 class="url-result" [class.noselect]="!shortUrlResult">{{ shortUrlResult || 'http://exam.co/r/1aBCd' }}</h1>
+    </div>
+    <div class="title">Inflate URL</div>
+    <div class="url-item">
+        <form #inflateForm="ngForm" (ngSubmit)="process(inflateForm, 'inflate')" class="form form-url">
+            <div class="form-field input-div">
+                <span class="error" [class.no-error]="!longUrlErr">You have inputted an invalid URL!</span>
+                <input name="shortUrl" id="url-shorturl" type="text" class="form-input" placeholder="type the URL you wish to inflate..." ngModel required>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+        <h2 class="url-result" [class.noselect]="!longUrlResult">{{ longUrlResult || 'https://www.nintex.com/why-nintex/careers/?gh_jid=1681693' }}</h2>
+    </div>
+</div>
