@@ -10,7 +10,7 @@
                 <input type="submit" value="submit">
             </div>
         </form>
-        <h1 class="url-result" [class.noselect]="!shortUrlResult">{{ shortUrlResult || 'http://exam.co/r/1aBCd' }}</h1>
+        <h1 class="url-result" [class.noselect]="!shortUrlResult">{{ shortUrlResult || currentUrl + 'r/1aBCd' }}</h1>
     </div>
     <div class="title">Inflate URL</div>
     <div class="url-item">

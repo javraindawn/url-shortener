@@ -14,9 +14,13 @@ export class FormsComponent implements OnInit {
   shortUrlErr: boolean;
   longUrlErr: boolean;
 
+  currentUrl: string;
+
   constructor(private apiService: ApiService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.currentUrl = window.location.href;
+  }
 
   process(form, type) {
     if ((form.value.shortUrl && form.value.shortUrl !== '') || (form.value.longUrl && form.value.longUrl !== '')) {

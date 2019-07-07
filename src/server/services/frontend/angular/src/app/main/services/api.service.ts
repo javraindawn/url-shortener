@@ -10,7 +10,7 @@ import { Url } from  '../models/url';
   providedIn: 'root'
 })
 export class ApiService {
-  API_SERVER = "http://exam.co/api/url";
+  API_SERVER = "/api/url";
 
   constructor(private httpClient: HttpClient) { }
 
