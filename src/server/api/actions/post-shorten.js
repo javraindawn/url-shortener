@@ -41,7 +41,7 @@ module.exports = async (request, h) => {
             await Index(R.pick(['id', 'shortUrl', 'longUrl'], result));
         }
 
-        result.shortUrl = `${Config.get('/domain/protocol')}://${Config.get('/domain/host')}/r/${result.shortUrl}`;
+        result.shortUrl = `${Config.get('/domain/protocol')}//${Config.get('/domain/host')}/r/${result.shortUrl}`;
         return h.response(result);
     } catch (err) {
         throw Boom.boomify(err);
